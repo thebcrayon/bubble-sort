@@ -2,10 +2,8 @@ def bubble_sort(array)
   i = array.size - 1
   array.each do |value|
     i.times do |n|
-      a = array[n] ; b = array[n+1]
-      if (a > b)
-        array[n] = b
-        array[n+1] = a
+      if (array[n] > array[n+1])
+        array[n], array[n+1] = array[n+1], array[n]
       end
     end
   end
